@@ -94,7 +94,7 @@ module Rebay
     
     private    
     def build_request_url(service, params=nil)
-      url = "#{self.class.base_url}?OPERATION-NAME=#{service}&SERVICE-VERSION=#{VERSION}&SECURITY-APPNAME=#{Rebay::Api.app_id}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD"
+      url = "#{self.class.base_url}?OPERATION-NAME=#{service}&SERVICE-NAME=FindingService&SERVICE-VERSION=#{VERSION}&SECURITY-APPNAME=#{Rebay::Api.app_id}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD"
       url += build_rest_payload(params)
       return url
     end
